@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+body{
+    font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial , sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+h2{
+    margin: 20px;
+}
+.according-container{
+    max-width: 80%;
+    margin: auto;
+}
+.according-container .accord{
+    width: 100%;
+    background-color: #191e24;
+    color: white;
+    display: block;
+    padding: 15px 25px;
+    position: relative;
+    cursor: pointer;
+    margin: 2px;
+    border-radius: 8px;
+    text-align: start;
+}
+label{
+    flex: 1;
+    text-align: start;
+}
+.accord input{
+  display: none;
+}
+.accord label::after{
+    content: '+';
+    position: absolute;
+    color: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.accord input:checked ~ label::after{
+    content: '-';
+}
+.accord-content{
+    padding: 20px;
+    max-height: 100vh;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 0 0  8px 8px; 
+    color: #191e24;
+}
+.accord input:checked ~  .accord-content{
+    display: block;
+}
